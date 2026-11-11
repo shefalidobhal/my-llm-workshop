@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 3: Buffer Capacity &amp; Limits — Buffer pH Course</title>
+<style>
+  :root { --accent: #0d6a65; --accent-soft: #d7f0dc; --bg: #f6faf9; --fg: #15242a; --card: #fff; --border: #c9d6d4; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #62c4ba; --accent-soft: #1d5b2a; --bg: #152328; --fg: #e3ecec; --card: #0f191d; --border: #27383e; } }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, sans-serif; margin: 0; background: var(--bg); color: var(--fg); }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+  header { margin-bottom: 24px; }
+  .back-link { display: inline-block; color: var(--accent); text-decoration: none; font-weight: 600; margin-bottom: 16px; }
+  .back-link:hover { text-decoration: underline; }
+  h1 { font-size: 2rem; margin: 0 0 8px; color: var(--accent); }
+  .lesson-meta { color: #55676e; font-size: 0.95rem; margin: 0; }
+  @media (prefers-color-scheme: dark) { .lesson-meta { color: #94a7ac; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 20px; margin: 16px 0; }
+  .card h2 { margin: 0 0 12px; font-size: 1.25rem; color: var(--accent); }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 8px 0 0 1.2rem; padding: 0; }
+  .card li { margin: 6px 0; }
+  .card code { background: var(--accent-soft); padding: 2px 6px; border-radius: 4px; font-size: 0.95em; }
+  @media (prefers-color-scheme: dark) { .card code { background: #1d5b2a; color: #d7f0dc; } }
+  .chem { font-family: "Georgia", serif; font-style: italic; }
+  .equation { background: var(--accent-soft); border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-family: "Georgia", serif; text-align: center; overflow-x: auto; font-size: 1.1rem; }
+  @media (prefers-color-scheme: dark) { .equation { background: #1d5b2a; color: #d7f0dc; } }
+  .key-idea { background: #fff8e1; border-left-color: #f57f17; border-radius: 8px; padding: 12px 16px; margin: 12px 0; }
+  @media (prefers-color-scheme: dark) { .key-idea { background: #2e2400; border-left-color: #f57f17; color: #ffe082; } }
+  .nav-bottom { display: flex; justify-content: space-between; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .nav-bottom a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .nav-bottom a:hover { text-decoration: underline; }
+  footer { text-align: center; color: #55676e; font-size: 0.85rem; margin-top: 40px; }
+  @media (prefers-color-scheme: dark) { footer { color: #94a7ac; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a class="back-link" href="index.html">← Back to course home</a>
+    <h1>Lesson 3: Buffer Capacity &amp; Limits</h1>
+    <p class="lesson-meta">First-year chemistry · ~6 min read</p>
+  </header>
+
+  <div class="card">
+    <h2>Buffers Are Not Infinite</h2>
+    <p>Lessons 1 and 2 showed that a buffer resists pH change by shifting the <span class="chem">HA ⇌ H⁺ + A⁻</span> equilibrium. But the buffer components get used up. Add enough acid, and eventually all the <span class="chem">A⁻</span> is converted to <span class="chem">HA</span> — no conjugate base remains to soak up more <code>H⁺</code>. The buffer is exhausted, and the pH plummets.</p>
+    <p><strong>Buffer capacity</strong> is the amount of strong acid or base a buffer can absorb before the pH changes by a given amount (often 1 pH unit).</p>
+  </div>
+
+  <div class="card">
+    <h2>What Determines Buffer Capacity?</h2>
+    <p>Two factors control capacity:</p>
+    <ul>
+      <li><strong>Total concentration</strong> of the buffer pair (<code>[HA] + [A⁻]</code>). More total moles = more acid or base can be neutralized. A 0.5 M buffer has ~5× the capacity of a 0.1 M buffer.</li>
+      <li><strong>The ratio [A⁻]/[HA]</strong>. Capacity is highest when the ratio is near 1 (pH ≈ pKₐ). As the ratio shifts far from 1, one component becomes scarce, and capacity drops sharply.</li>
+    </ul>
+    <div class="equation">
+      <span class="chem">β ≈ 2.303 × [HA][A⁻] / ([HA] + [A⁻])</span>
+    </div>
+    <p class="key-idea">(where <code>β</code> is buffer capacity in mol·L⁻¹·pH⁻¹ — the approximate formula above shows it's maximized when <code>[HA] = [A⁻]</code>.)</p>
+  </div>
+
+  <div class="card" style="text-align:center;">
+    <h2>Visual: Buffer Capacity Factors</h2>
+    <img src="buffer-capacity.svg" alt="Buffer capacity titration curve and factors: total concentration and ratio" style="max-width:100%; height:auto; border-radius:8px; border:1px solid var(--border);">
+  </div>
+
+  <div class="card">
+    <h2>Visualizing the Limit</h2>
+    <p>Imagine titrating a buffer with strong acid. The pH stays flat — then suddenly drops off a cliff.</p>
+    <div style="text-align:center; margin:16px 0; font-family:monospace; font-size:0.9rem; overflow-x:auto; background:var(--card); border:1px solid var(--border); border-radius:8px; padding:16px;">
+pH │
+   │──────────────────  ← Buffer region (flat)
+   │
+   │                  \
+   │                   \  ← Equivalence point: buffer exhausted
+   │                    \
+   │                     \
+   └─────────────────────────► Acid added
+        Capacity used up
+    </div>
+    <p>The "flat" region is where both <span class="chem">HA</span> and <span class="chem">A⁻</span> are present in useful amounts. Once one runs out, the solution behaves like plain water (or a solution of just the weak acid).</p>
+  </div>
+
+  <div class="card">
+    <h2>Practical Rules of Thumb</h2>
+    <ul>
+      <li><strong>Use enough buffer:</strong> For most lab work, 0.05–0.2 M total concentration is typical. Too dilute = low capacity. Too concentrated = ionic strength effects, cost, solubility limits.</li>
+      <li><strong>Stay near the pKₐ:</strong> Effective range is roughly pKₐ ± 1. Outside this, one component is < 10% of the other, and capacity is low.</li>
+      <li><strong>Don't overshoot the ratio:</strong> If you need pH = pKₐ + 1.5, the ratio is ~32:1. You have very little <span class="chem">HA</span> left to neutralize added base. A small base addition will crash the pH.</li>
+      <li><strong>Dilution dilutes capacity, not pH:</strong> Diluting a buffer 10× keeps the pH ~same (ratio unchanged) but cuts capacity 10×.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Real-World Limits</h2>
+    <ul>
+      <li><strong>Blood:</strong> The bicarbonate system has huge capacity for metabolic acids, but limited capacity for respiratory (CO₂) changes — that's why breathing rate adjusts to help.</li>
+      <li><strong>Ocean acidification:</strong> The ocean's carbonate buffer is massive, but absorbing gigatons of CO₂ is shifting the ratio — pH has dropped ~0.1 units since pre-industrial times.</li>
+      <li><strong>Lab prep:</strong> Always calculate how much acid/base your experiment might generate, and prepare buffer with 2–5× that capacity as a safety margin.</li>
+    </ul>
+  </div>
+
+  <div class="card key-idea">
+    <strong>Key idea:</strong> Buffer capacity = how much acid/base the buffer can absorb. It grows with <strong>total concentration</strong> and peaks when <strong>pH = pKₐ</strong> (ratio = 1). A buffer fails when one component runs out — then pH changes drastically.
+  </div>
+
+  <!-- Socratic question block -->
+  <div class="socratic" data-question="buffer-3">
+    <p>You have 1 L of a 0.1 M phosphate buffer at pH 7.21 (pKₐ = 7.21, so [HPO₄²⁻] = [H₂PO₄⁻] = 0.05 M). You add 0.06 mol of HCl. The pH drops sharply. Explain why this amount of acid exceeds the buffer's capacity, even though the buffer's total phosphate is 0.1 M.</p>
+  </div>
+
+  <nav class="nav-bottom">
+    <a href="lesson2.html">← Lesson 2: How Buffers Resist pH Change</a>
+    <a href="index.html">Course home →</a>
+  </nav>
+
+  <footer>
+    Buffer pH Course · Lesson 3 of 3
+  </footer>
+</div>
+<script src="socratic.js" defer></script>
+</body>
+</html>

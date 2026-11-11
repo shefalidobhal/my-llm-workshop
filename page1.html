@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page 1: Taxonomy & Species Boundaries</title>
+<style>
+  :root { --accent: #1B5E20; --accent-soft: #E8F5E9; --bg: #F1F8F2; --fg: #1A2E1C; --card: #FFFFFF; --border: #A5D6A7; --gold: #FFB300; --red: #C62828; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #66BB6A; --accent-soft: #1B5E20; --bg: #1A2E1C; --fg: #E8F5E9; --card: #1E3A20; --border: #2E7D32; --gold: #FFB300; --red: #EF5350; } }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, sans-serif; margin: 0; background: var(--bg); color: var(--fg); }
+  .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+  header { text-align: center; margin-bottom: 24px; }
+  h1 { font-size: 2rem; margin: 0 0 8px; color: var(--accent); }
+  .tagline { color: #4A6D50; font-size: 1rem; margin: 0; }
+  @media (prefers-color-scheme: dark) { .tagline { color: #A5D6A7; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 20px; margin: 16px 0; }
+  .card h2 { margin: 0 0 12px; font-size: 1.3rem; color: var(--accent); }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 8px 0 0 1.2rem; padding: 0; }
+  .card li { margin: 6px 0; }
+  .nav { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+  .nav a { padding: 10px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; }
+  .nav a:hover { background: var(--accent-soft); }
+  .nav a.active { background: var(--accent); color: white; }
+  .figure-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 16px 0; }
+  .figure-card img { width: 100%; height: auto; display: block; max-width: 100%; }
+  .figure-card .caption { padding: 12px; font-size: 0.9rem; color: var(--fg); word-wrap: break-word; overflow-wrap: break-word; }
+  .figure-card .caption strong { color: var(--accent); }
+  .key-box { background: var(--accent-soft); border: 2px solid var(--accent); border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .key-box h3 { margin: 0 0 8px; color: var(--accent); }
+  .key-box ul { margin: 0; padding-left: 1.2rem; }
+  .gold-bar { height: 3px; background: linear-gradient(90deg, var(--gold), var(--accent)); border-radius: 2px; margin: 16px 0; }
+  footer { text-align: center; color: #4A6D50; font-size: 0.85rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+  @media (prefers-color-scheme: dark) { footer { color: #A5D6A7; } }
+  .socratic { background: #FFF8E1; border: 2px solid var(--gold); border-radius: 8px; padding: 16px; margin: 20px 0; }
+  .socratic h3 { margin: 0 0 10px; color: var(--gold); }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Page 1: Taxonomy & Species Boundaries</h1>
+    <p class="tagline">How genomics resolved the <em>Pectobacterium</em> species problem</p>
+  </header>
+
+  <nav class="nav" aria-label="Pages">
+    <a href="index.html">Overview</a>
+    <a href="page1.html" class="active">1. Taxonomy</a>
+    <a href="page2.html">2. Virulence & HGT</a>
+    <a href="page3.html">3. Car Cluster & Regulation</a>
+  </nav>
+
+  <div class="card">
+    <h2>The Problem</h2>
+    <p><em>Pectobacterium</em> (formerly <em>Erwinia</em>) causes soft rot in potatoes, cabbage, ornamentals, and staples worldwide. For decades, taxonomy relied on 16S rRNA and biochemistry — insufficient for species-level ID. <em>P. carotovorum</em> subsp. <em>carotovorum</em> became a "catch-all" taxon for diverse isolates.</p>
+  </div>
+
+  <div class="figure-card">
+    <img src="01_taxonomic_reclassification.png" alt="Taxonomic reclassification: 3 subspecies become 3 species">
+    <div class="caption"><strong>Figure 1.</strong> Three <em>P. carotovorum</em> subsp. <em>carotovorum</em> strains reclassified as distinct species via ANI/isDDH and phylogenomics. PccS1 → <em>P. aroidearum</em>; PCC21 → <em>P. brasiliense</em>; Strain 67 → <em>P. actinidiae</em>.</div>
+  </div>
+
+  <div class="card">
+    <h2>What the Papers Found</h2>
+    <ul>
+      <li><strong>Paper 1 (Yang 2026):</strong> 78 strains (14 new isolates + 64 GenBank). Phylogenomics (ML/NJ trees on single-copy orthologs) + ANI/isDDH matrices confirm 3 subspecies elevations and validate 14 new isolates at species level.</li>
+      <li><strong>Paper 2 (Xu 2021):</strong> Complete genome of <em>P. aroidearum</em> L6 (4.99 Mb). ANI=98%, isDDH=83% with PC1 — same species. But <em>P. carotovorum</em> subsp. <em>carotovorum</em> JR1.1 vs Strain 67: ANI=93%, isDDH=51% — <strong>different species mislabeled in GenBank</strong>.</li>
+      <li>Both papers: <strong>ANI ≥95–96% and isDDH ≥70%</strong> are the genomic gold standard, replacing wet-lab DDH.</li>
+    </ul>
+  </div>
+
+  <div class="figure-card">
+    <img src="05_ANI_isDDH_thresholds.png" alt="ANI and isDDH thresholds with comparative table">
+    <div class="caption"><strong>Figure 2.</strong> Threshold concepts and cross-paper comparison. Paper 1: 78 strains; Paper 2: 19 strains. Both find GenBank mislabels. Concordance between ANI, isDDH, and phylogeny validates the genomic standard.</div>
+  </div>
+
+  <div class="key-box">
+    <h3>Key Takeaways</h3>
+    <ul>
+      <li><strong>Three subspecies → three species:</strong> PccS1 (<em>P. aroidearum</em>), PCC21 (<em>P. brasiliense</em>), Strain 67 (<em>P. actinidiae</em>)</li>
+      <li><strong>GenBank errors persist:</strong> Both papers independently identify mislabeled genomes (Strain 67, JR1.1, PCC21, PccS1)</li>
+      <li><strong>Genomics > 16S rRNA:</strong> 16S trees (Fig 2B in both papers) show poor resolution; whole-genome phylogeny is decisive</li>
+      <li><strong>Three methods = robust:</strong> ML tree + NJ tree + ANI/isDDH concordance gives confidence</li>
+    </ul>
+  </div>
+
+  <div class="gold-bar"></div>
+
+  <div class="card">
+    <h2>Check Your Understanding</h2>
+    <div class="socratic" data-question="taxonomy-1">
+      <p><strong>Question:</strong> Why is 16S rRNA sequencing insufficient for species-level identification in <em>Pectobacterium</em>, and what genomic metrics do Yang et al. (2026) and Xu et al. (2021) use instead?</p>
+    </div>
+    <p><em>Write your answer in your own words. The tutor will evaluate and guide you.</em></p>
+  </div>
+
+  <footer>
+    ← <a href="index.html" style="color: var(--accent);">Overview</a> | <a href="page2.html" style="color: var(--accent);">Page 2: Virulence & HGT →</a><br>
+    Source: Yang et al. (2026) <em>Plant Disease</em> 110:821–832 | Xu et al. (2021) <em>Front. Microbiol.</em> 12:679102
+  </footer>
+</div>
+<script src="socratic.js" defer></script>
+</body>
+</html>

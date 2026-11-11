@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page 2: Virulence Arsenal & HGT</title>
+<style>
+  :root { --accent: #1B5E20; --accent-soft: #E8F5E9; --bg: #F1F8F2; --fg: #1A2E1C; --card: #FFFFFF; --border: #A5D6A7; --gold: #FFB300; --red: #C62828; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #66BB6A; --accent-soft: #1B5E20; --bg: #1A2E1C; --fg: #E8F5E9; --card: #1E3A20; --border: #2E7D32; --gold: #FFB300; --red: #EF5350; } }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, sans-serif; margin: 0; background: var(--bg); color: var(--fg); }
+  .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+  header { text-align: center; margin-bottom: 24px; }
+  h1 { font-size: 2rem; margin: 0 0 8px; color: var(--accent); }
+  .tagline { color: #4A6D50; font-size: 1rem; margin: 0; }
+  @media (prefers-color-scheme: dark) { .tagline { color: #A5D6A7; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 20px; margin: 16px 0; }
+  .card h2 { margin: 0 0 12px; font-size: 1.3rem; color: var(--accent); }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 8px 0 0 1.2rem; padding: 0; }
+  .card li { margin: 6px 0; }
+  .nav { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+  .nav a { padding: 10px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; }
+  .nav a:hover { background: var(--accent-soft); }
+  .nav a.active { background: var(--accent); color: white; }
+  .figure-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 16px 0; }
+  .figure-card img { width: 100%; height: auto; display: block; max-width: 100%; }
+  .figure-card .caption { padding: 12px; font-size: 0.9rem; color: var(--fg); word-wrap: break-word; overflow-wrap: break-word; }
+  .figure-card .caption strong { color: var(--accent); }
+  .key-box { background: var(--accent-soft); border: 2px solid var(--accent); border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .key-box h3 { margin: 0 0 8px; color: var(--accent); }
+  .key-box ul { margin: 0; padding-left: 1.2rem; }
+  .gold-bar { height: 3px; background: linear-gradient(90deg, var(--gold), var(--accent)); border-radius: 2px; margin: 16px 0; }
+  footer { text-align: center; color: #4A6D50; font-size: 0.85rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+  @media (prefers-color-scheme: dark) { footer { color: #A5D6A7; } }
+  .socratic { background: #FFF8E1; border: 2px solid var(--gold); border-radius: 8px; padding: 16px; margin: 20px 0; }
+  .socratic h3 { margin: 0 0 10px; color: var(--gold); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Page 2: Virulence Arsenal & Horizontal Gene Transfer</h1>
+    <p class="tagline">What makes <em>Pectobacterium</em> pathogenic — and where those genes come from</p>
+  </header>
+
+  <nav class="nav" aria-label="Pages">
+    <a href="index.html">Overview</a>
+    <a href="page1.html">1. Taxonomy</a>
+    <a href="page2.html" class="active">2. Virulence & HGT</a>
+    <a href="page3.html">3. Car Cluster & Regulation</a>
+  </nav>
+
+  <div class="card">
+    <h2>Virulence Factor Inventory (Paper 2: <em>P. aroidearum</em> L6)</h2>
+    <p>Xu et al. (2021) annotated the complete genome of L6 and predicted 478 pathogenesis-related genes (10.4% of genome) via VFDB. The arsenal centers on three pillars:</p>
+  </div>
+
+  <div class="figure-card">
+    <img src="03_virulence_factors_L6.png" alt="Virulence factors in L6: toxins, PCWDEs, secretion systems">
+    <div class="caption"><strong>Figure 3.</strong> Left: Toxins (25), PCWDEs — pectinases (28), cellulases (3), proteases (4). Right: 122 secretion system genes across 6 types. T3SS alone has 723 predicted genes, but effectors remain unknown.</div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h2>Plant Cell-Wall Degrading Enzymes (PCWDEs)</h2>
+      <ul>
+        <li><strong>Pectinases (28):</strong> Main weapons — degrade pectin, the "glue" of plant cell walls</li>
+        <li><strong>Cellulases (3):</strong> Target cellulose backbone</li>
+        <li><strong>Proteases (4):</strong> Degrade structural proteins</li>
+        <li>These enzymes cause the maceration ("soft rot") symptom</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Secretion Systems — Delivery Machines</h2>
+      <ul>
+        <li><strong>T1SS (14):</strong> Direct toxin/enzyme export</li>
+        <li><strong>T2SS (23):</strong> Major PCWDE secretion route</li>
+        <li><strong>T3SS (29 structural + 723 associated):</strong> Injects effectors into plant cells</li>
+        <li><strong>T4SS (25):</strong> Conjugation, DNA/protein transfer</li>
+        <li><strong>T5SS (0):</strong> Absent in L6</li>
+        <li><strong>T6SS (31):</strong> Interbacterial competition</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Horizontal Gene Transfer: The Innovation Engine (Paper 1)</h2>
+    <p>Yang et al. (2026) identified <strong>15 Horizontally Acquired Islands (HAIs)</strong> in PccS1 (<em>P. aroidearum</em>) using three GI prediction tools (IslandPick, SIGI-HMM, IslandPath-DIMOB). These HAIs are not random — they concentrate virulence and adaptation genes.</p>
+  </div>
+
+  <div class="figure-card">
+    <img src="04_HAI_genomic_islands.png" alt="15 HAIs mapped on PccS1 chromosome">
+    <div class="caption"><strong>Figure 4.</strong> 15 HAIs distributed along the PccS1 chromosome. Color-coded by function: prophages (gold), T3SS/T4SS (red/orange), pathogenicity (red), metabolic (green), AMR (orange/purple). Three complete prophages (HAI1, 8, 13).</div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h2>What HAIs Carry</h2>
+      <ul>
+        <li><strong>Secretion systems:</strong> T3SS (HAI3), T4SS/virB (HAI12), T2SS (HAI14)</li>
+        <li><strong>Toxins & PCWDEs:</strong> HAI6, HAI9, HAI14, HAI15</li>
+        <li><strong>LPS/glycan biosynthesis:</strong> HAI10 (surface adaptation)</li>
+        <li><strong>Metabolic islands:</strong> Macrolide, terpenoid, polyketide, thiamine (HAI3, 7, 9)</li>
+        <li><strong>AMR:</strong> MdtN, MdtA, antitoxin (HAI5, 7, 15)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Three Species Where HGT Drives Pathogenicity</h2>
+      <ul>
+        <li><strong><em>P. aroidearum</em> PccS1</strong> (this study): 15 HAIs</li>
+        <li><strong><em>P. atrosepticum</em> SCRI1043:</strong> GIs linked to virulence</li>
+        <li><strong><em>P. wasabiae</em> SCC3193:</strong> Strain-unique GIs for virulence, secretion, colonization (Nykyri et al. 2012)</li>
+      </ul>
+      <p>Conclusion: <strong>HGT is a major driver of host adaptation and virulence evolution</strong> in <em>Pectobacterium</em>.</p>
+    </div>
+  </div>
+
+  <div class="key-box">
+    <h3>Key Takeaways</h3>
+    <ul>
+      <li><strong>Three pillars:</strong> Toxins + PCWDEs + Secretion systems = soft rot machinery</li>
+      <li><strong>T3SS is the crown jewel:</strong> 723 genes predicted in L6, but <strong>zero effectors characterized</strong> — major gap</li>
+      <li><strong>HAIs = innovation hotspots:</strong> Phages, integrases, transposases mediate acquisition</li>
+      <li><strong>Convergent evolution:</strong> Independent HGT events in different species yield similar virulence toolkits</li>
+    </ul>
+  </div>
+
+  <div class="gold-bar"></div>
+
+  <div class="card">
+    <h2>Check Your Understanding</h2>
+    <div class="socratic" data-question="virulence-1">
+      <p><strong>Question:</strong> The T3SS in <em>P. aroidearum</em> L6 has 723 predicted associated genes, yet no effectors have been functionally characterized. Why is identifying T3SS effectors critical for understanding pathogenesis, and what genomic approaches could reveal them?</p>
+    </div>
+    <p><em>Write your answer in your own words. The tutor will evaluate and guide you.</em></p>
+  </div>
+
+  <footer>
+    ← <a href="page1.html" style="color: var(--accent);">Page 1: Taxonomy</a> | <a href="page3.html" style="color: var(--accent);">Page 3: Car Cluster & Regulation →</a><br>
+    Source: Yang et al. (2026) <em>Plant Disease</em> 110:821–832 | Xu et al. (2021) <em>Front. Microbiol.</em> 12:679102
+  </footer>
+</div>
+<script src="socratic.js" defer></script>
+</body>
+</html>

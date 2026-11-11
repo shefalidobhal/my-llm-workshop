@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600" height="350" role="img" aria-labelledby="title3 desc3">
+  <title id="title3">Buffer capacity: how much acid/base a buffer can absorb</title>
+  <desc id="desc3">Two panels. Left: titration curve showing flat buffer region then sharp drop when exhausted. Right: bar chart showing capacity depends on total concentration and is maximum at ratio 1 (pH = pKa).</desc>
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f6faf9"/>
+      <stop offset="100%" stop-color="#e8f4f2"/>
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0d6a65" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="600" height="350" fill="url(#bgGrad3)"/>
+  
+  <!-- Left panel: Titration curve -->
+  <g transform="translate(30,20)" filter="url(#shadow3)">
+    <rect x="0" y="0" width="270" height="310" rx="12" fill="#fff" stroke="#c9d6d4" stroke-width="2"/>
+    <text x="135" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0d6a65">Titration: Adding Acid to Buffer</text>
+    
+    <!-- Axes -->
+    <g stroke="#55676e" stroke-width="1.5">
+      <line x1="45" y1="260" x2="45" y2="40"/>
+      <line x1="45" y1="260" x2="240" y2="260"/>
+      <path d="M40,45 L45,40 L50,45" fill="#55676e"/>
+      <path d="M235,255 L240,260 L235,265" fill="#55676e"/>
+    </g>
+    
+    <!-- Y axis labels -->
+    <g font-family="system-ui,sans-serif" font-size="10" fill="#55676e" text-anchor="end">
+      <text x="40" y="48">High pH</text>
+      <text x="40" y="150">pKₐ</text>
+      <text x="40" y="255">Low pH</text>
+    </g>
+    <text x="135" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#55676e">Acid added (mol)</text>
+    
+    <!-- Buffer region -->
+    <rect x="45" y="60" width="150" height="80" fill="#d7f0dc" opacity="0.3" stroke="#0d6a65" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="120" y="105" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#0d6a65" font-weight="600">BUFFER REGION</text>
+    <text x="120" y="120" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#55676e">pH ≈ constant</text>
+    
+    <!-- Titration curve -->
+    <!-- Flat region, then drop -->
+    <path d="M 45,150 
+             C 70,150 100,150 130,150
+             C 140,150 145,155 150,165
+             C 155,180 160,200 160,220
+             C 160,235 165,245 175,250" 
+          fill="none" stroke="#0d6a65" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Labels on curve -->
+    <text x="70" y="145" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#0d6a65">HA + A⁻ both present</text>
+    <text x="180" y="240" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#c0392b">A⁻ exhausted → pH crashes</text>
+    
+    <!-- Capacity arrow -->
+    <path d="M 45,270 L 195,270" fill="none" stroke="#4ecdc4" stroke-width="2" marker-end="url(#arrow3)"/>
+    <path d="M 195,270 L 190,265 M 195,270 L 190,275" stroke="#4ecdc4" stroke-width="2"/>
+    <text x="120" y="285" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#0d6a65" font-weight="600">Buffer capacity</text>
+    
+    <defs>
+      <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L9,3 Z" fill="#4ecdc4"/>
+      </marker>
+    </defs>
+    
+    <!-- Legend -->
+    <g font-family="system-ui,sans-serif" font-size="9" fill="#55676e">
+      <rect x="45" y="285" width="12" height="12" fill="#d7f0dc" opacity="0.3" stroke="#0d6a65" stroke-width="1" stroke-dasharray="4,2"/>
+      <text x="62" y="294">Buffer region</text>
+    </g>
+  </g>
+  
+  <!-- Right panel: Capacity factors -->
+  <g transform="translate(320,20)" filter="url(#shadow3)">
+    <rect x="0" y="0" width="250" height="310" rx="12" fill="#fff" stroke="#c9d6d4" stroke-width="2"/>
+    <text x="125" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#0d6a65">What Determines Capacity?</text>
+    
+    <!-- Factor 1: Total concentration -->
+    <text x="15" y="60" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#0d6a65">1. Total concentration</text>
+    
+    <!-- Bar chart for concentration -->
+    <g transform="translate(15,70)">
+      <g font-family="system-ui,sans-serif" font-size="10" fill="#55676e">
+        <text x="0" y="20" text-anchor="end">0.05 M</text>
+        <rect x="50" y="0" width="50" height="20" rx="3" fill="#ff6b6b"/>
+        <text x="105" y="15" text-anchor="start">Low capacity</text>
+        
+        <text x="0" y="55" text-anchor="end">0.1 M</text>
+        <rect x="50" y="35" width="100" height="20" rx="3" fill="#ffd166"/>
+        <text x="155" y="50" text-anchor="start">Medium</text>
+        
+        <text x="0" y="90" text-anchor="end">0.2 M</text>
+        <rect x="50" y="70" width="180" height="20" rx="3" fill="#4ecdc4"/>
+        <text x="235" y="85" text-anchor="start">High capacity</text>
+      </g>
+      <text x="50" y="110" font-family="system-ui,sans-serif" font-size="9" fill="#0d6a65" font-weight="600">More buffer molecules = more acid/base absorbed</text>
+    </g>
+    
+    <!-- Factor 2: Ratio -->
+    <text x="15" y="210" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#0d6a65">2. Ratio [A⁻]/[HA] (at fixed total)</text>
+    
+    <!-- Bar chart for ratio -->
+    <g transform="translate(15,220)">
+      <g font-family="system-ui,sans-serif" font-size="10" fill="#55676e">
+        <text x="0" y="20" text-anchor="end">Ratio 0.1</text>
+        <rect x="50" y="0" width="40" height="20" rx="3" fill="#ff6b6b"/>
+        <text x="95" y="15" text-anchor="start">Low (HA scarce)</text>
+        
+        <text x="0" y="55" text-anchor="end">Ratio 1</text>
+        <rect x="50" y="35" width="180" height="20" rx="3" fill="#4ecdc4"/>
+        <text x="235" y="50" text-anchor="start">MAX capacity (equal)</text>
+        
+        <text x="0" y="90" text-anchor="end">Ratio 10</text>
+        <rect x="50" y="70" width="40" height="20" rx="3" fill="#ff6b6b"/>
+        <text x="95" y="85" text-anchor="start">Low (A⁻ scarce)</text>
+      </g>
+      <text x="50" y="110" font-family="system-ui,sans-serif" font-size="9" fill="#0d6a65" font-weight="600">Capacity peaks at pH = pKₐ (ratio = 1)</text>
+    </g>
+  </g>
+</svg>

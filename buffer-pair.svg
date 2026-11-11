@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">Buffer pair: weak acid HA and conjugate base A⁻</title>
+  <desc id="desc1">Two panels showing how a buffer neutralizes added acid (left) and added base (right). Left: H⁺ enters, A⁻ binds it to form HA. Right: OH⁻ enters, HA dissociates to replace H⁺.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f6faf9"/>
+      <stop offset="100%" stop-color="#e8f4f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0d6a65" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="600" height="300" fill="url(#bgGrad)"/>
+  
+  <!-- Left panel: Add acid -->
+  <g transform="translate(40,30)" filter="url(#shadow)">
+    <rect x="0" y="0" width="240" height="240" rx="12" fill="#fff" stroke="#c9d6d4" stroke-width="2"/>
+    <text x="120" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#0d6a65">Add Acid (H⁺)</text>
+    <line x1="20" y1="40" x2="220" y2="40" stroke="#c9d6d4" stroke-width="1"/>
+    
+    <!-- Solution before -->
+    <text x="120" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#55676e">Before: HA and A⁻ in equilibrium</text>
+    <circle cx="70" cy="110" r="22" fill="#d7f0dc" stroke="#0d6a65" stroke-width="2"/>
+    <text x="70" y="116" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#0d6a65">HA</text>
+    <circle cx="170" cy="110" r="22" fill="#d7f0dc" stroke="#0d6a65" stroke-width="2"/>
+    <text x="170" y="116" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#0d6a65">A⁻</text>
+    <text x="120" y="145" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="#55676e">⇌</text>
+    
+    <!-- H+ entering -->
+    <circle cx="260" cy="110" r="14" fill="#ff6b6b" stroke="#c0392b" stroke-width="2"/>
+    <text x="260" y="116" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#fff">H⁺</text>
+    <path d="M240,110 L210,110" stroke="#0d6a65" stroke-width="3" marker-end="url(#arrow)"/>
+    
+    <!-- Reaction arrow -->
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L9,3 Z" fill="#0d6a65"/>
+      </marker>
+    </defs>
+    
+    <!-- After -->
+    <text x="120" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#0d6a65" font-weight="600">After: A⁻ + H⁺ → HA</text>
+    <circle cx="70" cy="210" r="22" fill="#d7f0dc" stroke="#0d6a65" stroke-width="2"/>
+    <text x="70" y="216" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#0d6a65">HA</text>
+    <circle cx="130" cy="210" r="22" fill="#d7f0dc" stroke="#0d6a65" stroke-width="2"/>
+    <text x="130" y="216" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#0d6a65">HA</text>
+    <circle cx="190" cy="210" r="22" fill="#fff8e1" stroke="#f57f17" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="190" y="216" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#f57f17">A⁻ (used)</text>
+    <text x="120" y="240" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#1d5b2a">pH barely changes ← equilibrium shifts left</text>
+  </g>
+  
+  <!-- Right panel: Add base -->
+  <g transform="translate(320,30)" filter="url(#shadow)">
+    <rect x="0" y="0" width="240" height="240" rx="12" fill="#fff" stroke="#c9d6d4" stroke-width="2"/>
+    <text x="120" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#0d6a65">Add Base (OH⁻)</text>
+    <line x1="20" y1="40" x2="220" y2="40" stroke="#c9d6d4" stroke-width="1"/>
+    
+    <!-- Solution before -->
+    <text x="120" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#55676e">Before: HA and A⁻ in equilibrium</text>
+    <circle cx="70" cy="110" r="22" fill="#d7f0dc" stroke="#0d6a65" stroke-width="2"/>
+    <text x="70" y="116" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#0d6a65">HA</text>
+    <circle cx="170" cy="110" r="22" fill="#d7f0dc" stroke="#0d6a65" stroke-width="2"/>
+    <text x="170" y="116" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#0d6a65">A⁻</text>
+    <text x="120" y="145" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="#55676e">⇌</text>
+    
+    <!-- OH- entering -->
+    <circle cx="260" cy="110" r="14" fill="#4ecdc4" stroke="#0d6a65" stroke-width="2"/>
+    <text x="260" y="116" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="bold" fill="#fff">OH⁻</text>
+    <path d="M240,110 L210,110" stroke="#0d6a65" stroke-width="3" marker-end="url(#arrow)"/>
+    
+    <!-- After -->
+    <text x="120" y="175" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#0d6a65" font-weight="600">After: HA → H⁺ + A⁻ (replaces H⁺)</text>
+    <circle cx="70" cy="210" r="22" fill="#fff8e1" stroke="#f57f17" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="70" y="216" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#f57f17">HA (used)</text>
+    <circle cx="130" cy="210" r="22" fill="#d7f0dc" stroke="#0d6a65" stroke-width="2"/>
+    <text x="130" y="216" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#0d6a65">A⁻</text>
+    <circle cx="190" cy="210" r="22" fill="#d7f0dc" stroke="#0d6a65" stroke-width="2"/>
+    <text x="190" y="216" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#0d6a65">A⁻</text>
+    <text x="120" y="240" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#1d5b2a">pH barely changes ← equilibrium shifts right</text>
+  </g>
+</svg>

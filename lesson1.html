@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 1: What Is a Buffer? — Buffer pH Course</title>
+<style>
+  :root { --accent: #0d6a65; --accent-soft: #d7f0dc; --bg: #f6faf9; --fg: #15242a; --card: #fff; --border: #c9d6d4; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #62c4ba; --accent-soft: #1d5b2a; --bg: #152328; --fg: #e3ecec; --card: #0f191d; --border: #27383e; } }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, sans-serif; margin: 0; background: var(--bg); color: var(--fg); }
+  .container { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+  header { margin-bottom: 24px; }
+  .back-link { display: inline-block; color: var(--accent); text-decoration: none; font-weight: 600; margin-bottom: 16px; }
+  .back-link:hover { text-decoration: underline; }
+  h1 { font-size: 2rem; margin: 0 0 8px; color: var(--accent); }
+  .lesson-meta { color: #55676e; font-size: 0.95rem; margin: 0; }
+  @media (prefers-color-scheme: dark) { .lesson-meta { color: #94a7ac; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 20px; margin: 16px 0; }
+  .card h2 { margin: 0 0 12px; font-size: 1.25rem; color: var(--accent); }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 8px 0 0 1.2rem; padding: 0; }
+  .card li { margin: 6px 0; }
+  .card code { background: var(--accent-soft); padding: 2px 6px; border-radius: 4px; font-size: 0.95em; }
+  @media (prefers-color-scheme: dark) { .card code { background: #1d5b2a; color: #d7f0dc; } }
+  .chem { font-family: "Georgia", serif; font-style: italic; }
+  .equation { background: var(--accent-soft); border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-family: "Georgia", serif; text-align: center; overflow-x: auto; }
+  @media (prefers-color-scheme: dark) { .equation { background: #1d5b2a; color: #d7f0dc; } }
+  .key-idea { background: #fff8e1; border-left-color: #f57f17; border-radius: 8px; padding: 12px 16px; margin: 12px 0; }
+  @media (prefers-color-scheme: dark) { .key-idea { background: #2e2400; border-left-color: #f57f17; color: #ffe082; } }
+  .nav-bottom { display: flex; justify-content: space-between; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .nav-bottom a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .nav-bottom a:hover { text-decoration: underline; }
+  footer { text-align: center; color: #55676e; font-size: 0.85rem; margin-top: 40px; }
+  @media (prefers-color-scheme: dark) { footer { color: #94a7ac; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a class="back-link" href="index.html">← Back to course home</a>
+    <h1>Lesson 1: What Is a Buffer?</h1>
+    <p class="lesson-meta">First-year chemistry · ~5 min read</p>
+  </header>
+
+  <div class="card">
+    <h2>The Problem: pH Changes Easily</h2>
+    <p>Pure water has a pH of 7. Add a tiny drop of hydrochloric acid, and the pH plunges. Add a drop of sodium hydroxide, and it soars. Most solutions have no defense against added acid or base — their pH changes dramatically.</p>
+    <p>But some solutions <em>resist</em> pH change. They are called <strong>buffers</strong>.</p>
+  </div>
+
+  <div class="card">
+    <h2>What a Buffer Is Made Of</h2>
+    <p>A buffer contains two things together in the same solution:</p>
+    <ul>
+      <li>A <strong>weak acid</strong> (call it <span class="chem">HA</span>) — it only partly dissociates.</li>
+      <li>The <strong>conjugate base</strong> of that weak acid (call it <span class="chem">A⁻</span>) — usually added as a salt like <span class="chem">NaA</span>.</li>
+    </ul>
+    <p>Together, they form a <em>conjugate acid–base pair</em>. Common examples:</p>
+    <ul>
+      <li>Acetic acid (<span class="chem">CH₃COOH</span>) + acetate (<span class="chem">CH₃COO⁻</span>)</li>
+      <li>Dihydrogen phosphate (<span class="chem">H₂PO₄⁻</span>) + hydrogen phosphate (<span class="chem">HPO₄²⁻</span>)</li>
+      <li>Carbonic acid (<span class="chem">H₂CO₃</span>) + bicarbonate (<span class="chem">HCO₃⁻</span>) — the main buffer in blood</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Why Both Parts Are Needed</h2>
+    <p>The weak acid <span class="chem">HA</span> can neutralize added <strong>base</strong> (it donates H⁺). The conjugate base <span class="chem">A⁻</span> can neutralize added <strong>acid</strong> (it accepts H⁺).</p>
+    <div class="equation">
+      <span class="chem">HA ⇌ H⁺ + A⁻</span>
+    </div>
+    <p>When you add <code>H⁺</code> (acid), the equilibrium shifts left — <span class="chem">A⁻</span> soaks it up. When you add <code>OH⁻</code> (base), it reacts with <span class="chem">H⁺</span>, and the equilibrium shifts right — <span class="chem">HA</span> dissociates to replace the lost <span class="chem">H⁺</span>. Either way, the pH barely moves.</p>
+  </div>
+
+  <div class="card" style="text-align:center;">
+    <h2>Visual: Buffer Pair in Action</h2>
+    <img src="buffer-pair.svg" alt="Buffer pair neutralizing added acid (left) and added base (right)" style="max-width:100%; height:auto; border-radius:8px; border:1px solid var(--border);">
+  </div>
+
+  <div class="card key-idea">
+    <strong>Key idea:</strong> A buffer is not "one thing" — it is a <em>pair</em> of species that can interconvert. Both must be present in reasonable amounts. A solution of only a weak acid, or only its conjugate base, is <em>not</em> a buffer.
+  </div>
+
+  <div class="card">
+    <h2>Buffers in Real Life</h2>
+    <ul>
+      <li><strong>Blood:</strong> The carbonic acid/bicarbonate system keeps blood pH at 7.4 ± 0.05. Without it, even the CO₂ from your breath would swing blood pH wildly.</li>
+      <li><strong>Ocean:</strong> The same carbonate system buffers seawater, protecting marine life.</li>
+      <li><strong>Lab:</strong> Phosphate buffers (pH ~7.2) and Tris buffers (pH ~8.0) are workhorses in biology labs.</li>
+      <li><strong>Consumer products:</strong> Shampoos, medicines, and foods often contain buffers to stay stable on the shelf.</li>
+    </ul>
+  </div>
+
+  <!-- Socratic question block -->
+  <div class="socratic" data-question="buffer-1">
+    <p>Imagine you have a solution that contains only acetic acid (CH₃COOH) in water, with no acetate salt added. You test its pH, then add a small amount of sodium hydroxide. The pH changes significantly. Why does this solution <em>not</em> act as a buffer against added base, even though acetic acid is a weak acid?</p>
+  </div>
+
+  <nav class="nav-bottom">
+    <a href="index.html">← Course home</a>
+    <a href="lesson2.html">Lesson 2: How Buffers Resist pH Change →</a>
+  </nav>
+
+  <footer>
+    Buffer pH Course · Lesson 1 of 3
+  </footer>
+</div>
+<script src="socratic.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pectobacterium Genomics: Comparative Insights</title>
+<style>
+  :root { --accent: #1B5E20; --accent-soft: #E8F5E9; --bg: #F1F8F2; --fg: #1A2E1C; --card: #FFFFFF; --border: #A5D6A7; --gold: #FFB300; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #66BB6A; --accent-soft: #1B5E20; --bg: #1A2E1C; --fg: #E8F5E9; --card: #1E3A20; --border: #2E7D32; --gold: #FFB300; } }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, sans-serif; margin: 0; background: var(--bg); color: var(--fg); }
+  .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+  header { text-align: center; margin-bottom: 32px; }
+  h1 { font-size: 2.2rem; margin: 0 0 8px; color: var(--accent); }
+  .tagline { color: #4A6D50; font-size: 1.1rem; margin: 0; }
+  @media (prefers-color-scheme: dark) { .tagline { color: #A5D6A7; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 20px; margin: 16px 0; }
+  .card h2 { margin: 0 0 12px; font-size: 1.3rem; color: var(--accent); }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 8px 0 0 1.2rem; padding: 0; }
+  .card li { margin: 6px 0; }
+  .nav { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+  .nav a { padding: 10px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; }
+  .nav a:hover { background: var(--accent-soft); }
+  .nav a.active { background: var(--accent); color: white; }
+  .figure-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 16px 0; }
+  .figure-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .figure-card img { width: 100%; height: auto; display: block; max-width: 100%; }
+  .figure-card .caption { padding: 12px; font-size: 0.9rem; color: var(--fg); word-wrap: break-word; overflow-wrap: break-word; }
+  .figure-card .caption strong { color: var(--accent); }
+  .page-link { display: inline-block; margin-top: 10px; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .page-link:hover { text-decoration: underline; }
+  footer { text-align: center; color: #4A6D50; font-size: 0.9rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+  @media (prefers-color-scheme: dark) { footer { color: #A5D6A7; } }
+  .papers { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+  .paper-badge { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 6px; padding: 8px 14px; font-size: 0.85rem; }
+  .paper-badge strong { color: var(--accent); }
+  .gold-bar { height: 3px; background: linear-gradient(90deg, var(--gold), var(--accent)); border-radius: 2px; margin: 16px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Pectobacterium Genomics</h1>
+    <p class="tagline">Comparative Insights from Two Landmark Studies</p>
+  </header>
+
+  <div class="papers">
+    <div class="paper-badge"><strong>Paper 1:</strong> Yang et al. (2026) <em>Plant Disease</em> 110:821–832</div>
+    <div class="paper-badge"><strong>Paper 2:</strong> Xu et al. (2021) <em>Front. Microbiol.</em> 12:679102</div>
+  </div>
+
+  <div class="card">
+    <h2>Overview</h2>
+    <p>Two complementary studies use whole-genome sequencing and comparative genomics to resolve <em>Pectobacterium</em> taxonomy, catalog virulence factors, and reveal how horizontal gene transfer shapes pathogenicity in this globally important soft-rot genus.</p>
+    <ul>
+      <li><strong>78 strains</strong> analyzed in Paper 1 (14 newly isolated + 64 public)</li>
+      <li><strong>19 strains</strong> in Paper 2 (complete genome of <em>P. aroidearum</em> L6 + 18 references)</li>
+      <li>Both converge on <strong>ANI ≥95–96% & isDDH ≥70%</strong> as the genomic gold standard for species delineation</li>
+      <li>Both expose <strong>misidentified genomes in GenBank</strong></li>
+    </ul>
+  </div>
+
+  <nav class="nav" aria-label="Summary Pages">
+    <a href="page1.html" class="active">1. Taxonomy &amp; Species Boundaries</a>
+    <a href="page2.html">2. Virulence Arsenal &amp; HGT</a>
+    <a href="page3.html">3. Car Cluster &amp; Regulatory Divergence</a>
+  </nav>
+
+  <div class="card">
+    <h2>Three Summary Pages</h2>
+    <div class="figure-grid">
+      <div class="figure-card">
+        <img src="01_taxonomic_reclassification.png" alt="Taxonomic reclassification">
+        <div class="caption"><strong>Page 1:</strong> 3 subspecies → 3 species via ANI/isDDH</div>
+      </div>
+      <div class="figure-card">
+        <img src="05_ANI_isDDH_thresholds.png" alt="ANI isDDH thresholds">
+        <div class="caption"><strong>Page 1:</strong> Thresholds & cross-paper comparison table</div>
+      </div>
+      <div class="figure-card">
+        <img src="03_virulence_factors_L6.png" alt="Virulence factors L6">
+        <div class="caption"><strong>Page 2:</strong> Toxins, PCWDEs, secretion systems in L6</div>
+      </div>
+      <div class="figure-card">
+        <img src="04_HAI_genomic_islands.png" alt="HAI genomic islands">
+        <div class="caption"><strong>Page 2:</strong> 15 HAIs on PccS1 chromosome</div>
+      </div>
+      <div class="figure-card">
+        <img src="02_car_gene_cluster_diversity.png" alt="Car gene cluster diversity">
+        <div class="caption"><strong>Page 3:</strong> Three car cluster types across genus</div>
+      </div>
+      <div class="figure-card">
+        <img src="06_car_regulation_virulence.png" alt="Car regulation vs virulence">
+        <div class="caption"><strong>Page 3:</strong> CarR bypasses CarI for carbapenem but not virulence</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Source papers: Yang et al. (2026) <em>Plant Disease</em> 110:821–832 | Xu et al. (2021) <em>Front. Microbiol.</em> 12:679102<br>
+    Figures synthesized from both studies | Live at <a href="https://bug-free-funicular-77xw57vwj9ww3x6g7-8000.app.github.dev/" style="color: var(--accent);">https://bug-free-funicular-77xw57vwj9ww3x6g7-8000.app.github.dev/</a>
+  </footer>
+</div>
+</body>
+</html>

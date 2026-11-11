@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page 3: Car Cluster & Regulatory Divergence</title>
+<style>
+  :root { --accent: #1B5E20; --accent-soft: #E8F5E9; --bg: #F1F8F2; --fg: #1A2E1C; --card: #FFFFFF; --border: #A5D6A7; --gold: #FFB300; --red: #C62828; --orange: #E65100; --purple: #6A1B9A; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #66BB6A; --accent-soft: #1B5E20; --bg: #1A2E1C; --fg: #E8F5E9; --card: #1E3A20; --border: #2E7D32; --gold: #FFB300; --red: #EF5350; --orange: #FF9800; --purple: #CE93D8; } }
+  * { box-sizing: border-box; }
+  body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, sans-serif; margin: 0; background: var(--bg); color: var(--fg); }
+  .container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+  header { text-align: center; margin-bottom: 24px; }
+  h1 { font-size: 2rem; margin: 0 0 8px; color: var(--accent); }
+  .tagline { color: #4A6D50; font-size: 1rem; margin: 0; }
+  @media (prefers-color-scheme: dark) { .tagline { color: #A5D6A7; } }
+  .card { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 20px; margin: 16px 0; }
+  .card h2 { margin: 0 0 12px; font-size: 1.3rem; color: var(--accent); }
+  .card p { margin: 0 0 10px; }
+  .card ul { margin: 8px 0 0 1.2rem; padding: 0; }
+  .card li { margin: 6px 0; }
+  .nav { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 24px 0; }
+  .nav a { padding: 10px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--accent); text-decoration: none; font-weight: 600; }
+  .nav a:hover { background: var(--accent-soft); }
+  .nav a.active { background: var(--accent); color: white; }
+  .figure-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 16px 0; }
+  .figure-card img { width: 100%; height: auto; display: block; max-width: 100%; }
+  .figure-card .caption { padding: 12px; font-size: 0.9rem; color: var(--fg); word-wrap: break-word; overflow-wrap: break-word; }
+  .figure-card .caption strong { color: var(--accent); }
+  .key-box { background: var(--accent-soft); border: 2px solid var(--accent); border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .key-box h3 { margin: 0 0 8px; color: var(--accent); }
+  .key-box ul { margin: 0; padding-left: 1.2rem; }
+  .gold-bar { height: 3px; background: linear-gradient(90deg, var(--gold), var(--accent)); border-radius: 2px; margin: 16px 0; }
+  footer { text-align: center; color: #4A6D50; font-size: 0.85rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); }
+  @media (prefers-color-scheme: dark) { footer { color: #A5D6A7; } }
+  .socratic { background: #FFF8E1; border: 2px solid var(--gold); border-radius: 8px; padding: 16px; margin: 20px 0; }
+  .socratic h3 { margin: 0 0 10px; color: var(--gold); }
+  .cluster-box { background: var(--card); border: 2px solid var(--border); border-radius: 8px; padding: 16px; margin: 12px 0; word-wrap: break-word; overflow-wrap: break-word; }
+  .cluster-box.full { border-color: var(--accent); }
+  .cluster-box.partial { border-color: var(--gold); }
+  .cluster-box.none { border-color: var(--red); }
+  .cluster-box h3 { margin: 0 0 8px; font-size: 1.1rem; }
+  @media (max-width: 900px) { .cluster-box { padding: 12px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Page 3: Car Cluster Diversity & Regulatory Divergence</h1>
+    <p class="tagline">The carbapenem antibiotic cluster — evolution by gene loss, and a regulatory surprise</p>
+  </header>
+
+  <nav class="nav" aria-label="Pages">
+    <a href="index.html">Overview</a>
+    <a href="page1.html">1. Taxonomy</a>
+    <a href="page2.html">2. Virulence & HGT</a>
+    <a href="page3.html" class="active">3. Car Cluster & Regulation</a>
+  </nav>
+
+  <div class="card">
+    <h2>The Carbapenem (car) Gene Cluster</h2>
+    <p>Carbapenem (Car) is a broad-spectrum β-lactam antibiotic produced by some <em>Pectobacterium</em> strains. It's regulated by quorum sensing (CarI makes OHHL signal → CarR activates carA–H). Yang et al. (2026) surveyed the car cluster across 73 <em>Pectobacterium</em> strains and found <strong>three distinct types</strong>.</p>
+  </div>
+
+  <div class="figure-card">
+    <img src="02_car_gene_cluster_diversity.png" alt="Three car gene cluster types">
+    <div class="caption"><strong>Figure 5.</strong> Three cluster types across the genus: carA–H (full, produces Car), carF–H (partial, resistance only), non-car (absent). Distribution is irregular — even within species.</div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+    <div class="cluster-box full">
+      <h3 style="color: var(--accent);">carA–H (Full)</h3>
+      <p><strong>Genes:</strong> carR → carA → carB → carC → carD → carE → carF → carG → carH</p>
+      <p><strong>Function:</strong> Complete carbapenem biosynthesis</p>
+      <p><strong>Phenotype:</strong> Kills Car-sensitive bacteria (halo assay)</p>
+      <p><strong>Examples:</strong> PccS1, PC1, some <em>P. brasiliense</em></p>
+    </div>
+    <div class="cluster-box partial">
+      <h3 style="color: var(--gold);">carF–H (Partial)</h3>
+      <p><strong>Genes:</strong> carF → carG → carH only</p>
+      <p><strong>Function:</strong> Car resistance (self-protection), no synthesis</p>
+      <p><strong>Phenotype:</strong> Survives Car exposure; no halo</p>
+      <p><strong>Examples:</strong> NJAU130, some <em>P. aroidearum</em></p>
+    </div>
+    <div class="cluster-box none">
+      <h3 style="color: var(--red);">non-car</h3>
+      <p><strong>Genes:</strong> None</p>
+      <p><strong>Function:</strong> No Car synthesis, no resistance</p>
+      <p><strong>Phenotype:</strong> Killed by Car (clear zone)</p>
+      <p><strong>Examples:</strong> Many <em>Pectobacterium</em>, all <em>Dickeya</em></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Evolutionary Origin: Gene Loss, Not Gain</h2>
+    <p>Yang et al. argue the patchy distribution stems from <strong>gene loss</strong>, not horizontal acquisition:</p>
+    <ul>
+      <li>carA–E (biosynthesis) are energetically costly; losing them is advantageous if Car isn't needed</li>
+      <li>carF–H (resistance) are retained because they protect against competitors' Car</li>
+      <li>Strains with carF–H survive Car exposure regardless of carA–E presence (Supplementary Fig. S2B)</li>
+      <li>Virulence is unaffected by car cluster type — regulated separately (Charkowski et al. 2012)</li>
+    </ul>
+  </div>
+
+  <div class="figure-card">
+    <img src="06_car_regulation_virulence.png" alt="Car regulation vs virulence in PccS1">
+    <div class="caption"><strong>Figure 6.</strong> Regulatory surprise: ΔcarI loses Car production AND virulence. Complementing with carR restores Car production (even stronger) but NOT virulence. Complementing with carI restores both. CarR can bypass CarI for antibiotic synthesis, but virulence requires CarI/OHHL specifically.</div>
+  </div>
+
+  <div class="card">
+    <h2>The Regulatory Puzzle (Paper 1, Fig 4)</h2>
+    <p>Yang et al. constructed ΔcarI, ΔcarC, ΔcarR mutants and complementation strains in PccS1:</p>
+    <ul>
+      <li><strong>Wild type:</strong> Car ✓, Virulence ✓</li>
+      <li><strong>ΔcarI:</strong> Car ✗, Virulence ✗</li>
+      <li><strong>ΔcarI + carI (comp.):</strong> Car ✓, Virulence ✓</li>
+      <li><strong>ΔcarI + carR (comp.):</strong> Car ✓✓ (stronger!), Virulence ✗</li>
+      <li><strong>ΔcarR + carR (comp.):</strong> Car ✓, Virulence ✓</li>
+    </ul>
+    <p><strong>OHHL bioassay</strong> confirms: carR complementation restores OHHL production in ΔcarI, implying CarR can dimerize/activate without CarI-made signal — possibly using a homologous molecule or cryptic synthase.</p>
+  </div>
+
+  <div class="key-box">
+    <h3>Key Takeaways</h3>
+    <ul>
+      <li><strong>Three cluster types:</strong> carA–H (make + resist), carF–H (resist only), non-car (neither)</li>
+      <li><strong>Gene loss drives diversity:</strong> carA–E lost; carF–H retained for self-protection</li>
+      <li><strong>No link to virulence:</strong> Virulence factors (PCWDEs, T3SS) regulated independently</li>
+      <li><strong>CarR bypasses CarI for Car:</strong> CarR complementation → OHHL restored → Car made</li>
+      <li><strong>But CarR CANNOT substitute for CarI in virulence:</strong> Separate regulatory paths</li>
+      <li><strong>Mechanism unknown:</strong> How CarR dimerizes without CarI? What signals virulence? <strong>Open question.</strong></li>
+    </ul>
+  </div>
+
+  <div class="gold-bar"></div>
+
+  <div class="card">
+    <h2>Check Your Understanding</h2>
+    <div class="socratic" data-question="car-1">
+      <p><strong>Question:</strong> In <em>P. aroidearum</em> PccS1, complementing a ΔcarI mutant with carR restores carbapenem production (even exceeding wild type) but fails to restore virulence. What does this reveal about the relationship between carbapenem biosynthesis and virulence regulation, and what hypothesis would you test to explain the mechanism?</p>
+    </div>
+    <p><em>Write your answer in your own words. The tutor will evaluate and guide you.</em></p>
+  </div>
+
+  <footer>
+    ← <a href="page2.html" style="color: var(--accent);">Page 2: Virulence & HGT</a> | <a href="index.html" style="color: var(--accent);">Overview</a><br>
+    Source: Yang et al. (2026) <em>Plant Disease</em> 110:821–832 (Figures 4, 8; Supplementary Figs. S1–S3)
+  </footer>
+</div>
+<script src="socratic.js" defer></script>
+</body>
+</html>
